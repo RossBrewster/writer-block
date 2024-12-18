@@ -7,6 +7,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Profile from './pages/Profile';
 import UserDashboard from './pages/UserDash';
+import Spinner from './components/Spinner';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/spinner" element={<Spinner />} />
       </Routes>
     </Router>
   );
