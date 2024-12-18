@@ -1,7 +1,9 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import BorderBox from '../components/BorderBox';
 import CubeSculpture from '../components/CubeSculpture';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen w-full bg-gray-900 flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full bg-gray-900 text-white">
@@ -23,10 +25,12 @@ const HomePage = () => {
               <a href="#" className="text-white hover:text-gray-300">Contact Us</a>
             </div>
             
-            {/* Sign Up Button */}
+            {/* Sign In Button */}
             <div className="flex-1 hidden md:flex justify-end">
               <div className="scale-75 origin-right">
-                <BorderBox buttonText="Sign In" />
+                <Link to="/sign-in">
+                  <BorderBox buttonText="Sign In" />
+                </Link>
               </div>
             </div>
           </div>
@@ -53,7 +57,9 @@ const HomePage = () => {
             {/* Center Sign Up Button with pointer-events-none wrapper */}
             <div className="absolute inset-0 flex justify-center items-center z-40 pointer-events-none">
               <div className="pointer-events-auto transform -translate-y-12">
-                <BorderBox buttonText="Sign Up" />
+                <Link to="/sign-up">
+                  <BorderBox buttonText="Sign Up" />
+                </Link>
               </div>
             </div>
 
